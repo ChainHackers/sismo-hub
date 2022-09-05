@@ -109,4 +109,20 @@ export const playgroundFlows: Flow[] = [
       "not a bot by showing this badge!",
     ],
   },
+  {
+    path: "snapshot-gitcoindao-voters",
+    attester: hydraS1SimpleAttester.name,
+    network: Network.Polygon,
+    attesterType: "hydra-s1",
+    badgesCollection: hydraS1SimpleBadges,
+    badgesInternalCollectionsIds: [9],
+    title: "Gitcoin Voters",
+    logoUrl: null,
+    subtitle: "Attest your vote on Snapshot's Gitcoin space",
+    onboardingDescription:
+      "Access gated Gitcoin channels and become an active member of the Gitcoin DAO",
+    ctaLabel: "Access gated channels",
+    ctaUrl: "<https://discord.gg/gitcoin>",
+    congratulationTexts: ["Join Snapshot space !"],
+  },
 ];
