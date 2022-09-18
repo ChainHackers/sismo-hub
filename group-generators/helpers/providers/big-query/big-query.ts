@@ -28,6 +28,18 @@ type BigQueryEventArgs = {
   options?: {
     blockNumber?: number;
     timestamp_period_utc?: string[];
+    data?: string
+  };
+};
+
+type BigQueryBadgeArgs = {
+  contractAddress: string;
+  eventABI: string;
+  options?: {
+    blockNumber?: number;
+    timestamp_period_utc?: string[];
+    zk_badge_id?: string
+    zk_badge_value?: string
   };
 };
 
@@ -179,7 +191,55 @@ export default class BigQueryProvider {
         ? `AND (block_timestamp BETWEEN TIMESTAMP("${options?.timestamp_period_utc[0]}") AND TIMESTAMP("${options?.timestamp_period_utc[1]}"))`
         : ""
     }
-    AND topics[OFFSET(0)] LIKE '%${eventSignature}%';
+    AND topics[OFFSET(0)] LIKE '%${eventSignature}%'
+    ${
+      options?.data
+        ? `AND data = "${options?.data}"`
+        : ""
+    };
+    `;
+    const response = await bigqueryClient.query(query);
+
+    // decode the event using the data and topics fields
+    return response[0].map(
+      (event) =>
+        iface.parseLog({
+          topics: event.topics,
+          data: event.data,
+        }).args as any as T
+    );
+  }
+
+  public async getBadges<T>({
+    contractAddress,
+    eventABI,
+    options,
+  }: BigQueryBadgeArgs): Promise<T[]> {
+    const bigqueryClient = await this.authenticate();
+    const iface = new Interface([eventABI]);
+
+    const eventSignature = utils.id(
+      `${iface.fragments[0].name}(${iface.fragments[0].inputs
+        .map((x) => x.type)
+        .join(",")})`
+    );
+
+    // filter the event directly in the query using the eventSignature
+    const query = `
+    SELECT data, topics FROM \`${dataUrl[this.network]}.logs\`
+    WHERE address="${contractAddress.toLowerCase()}"
+    ${options?.blockNumber ? `AND block_number <= ${options.blockNumber}` : ""}
+    ${
+      options?.timestamp_period_utc
+        ? `AND (block_timestamp BETWEEN TIMESTAMP("${options?.timestamp_period_utc[0]}") AND TIMESTAMP("${options?.timestamp_period_utc[1]}"))`
+        : ""
+    }
+    AND topics[OFFSET(0)] LIKE '%${eventSignature}%'
+    ${
+      options?.zk_badge_id
+        ? `AND data = "${utils.hexZeroPad(BigNumber.from(options?.zk_badge_id).toHexString(), 32)}${utils.hexZeroPad(BigNumber.from(options?.zk_badge_value).toHexString(), 32).slice(2)}"`
+        : ""
+    };
     `;
     const response = await bigqueryClient.query(query);
 

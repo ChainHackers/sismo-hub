@@ -24,7 +24,7 @@ const generator: GroupGenerator = {
     }>(
       gql`
         query getAllSismoDomainOwners {
-          domains {
+          domains(first: 1000) {
             owner {
               id
             }

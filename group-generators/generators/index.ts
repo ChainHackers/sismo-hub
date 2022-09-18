@@ -4,10 +4,13 @@ import eth2Depositors from "./eth2-depositors";
 import ethereumDevelopers from "./ethereum-developers";
 import ethereumMostTransactions from "./ethereum-most-transactions";
 import ethereumPowerUsers from "./ethereum-power-users";
+import EthereumPowerUsersZkBadgeHolders from "./ethereum-power-users-zk-badge-holders"
 import lens50BestFollowed from "./lens-50-best-followed";
 import lensProfiles from "./lens-profiles";
 import localGroup from "./local-group";
 import masqueradeLensFollowers from "./masquerade-lens-followers";
+import MasqueradeZkBadgeHolders from "./masquerade-zk-badge-holders"
+import pohZkBadgeHolders from "./poh-zk-badge-holders"
 import poolyLawyerMinters from "./pooly-lawyer-minters";
 import poolyMinters from "./pooly-minters";
 import proofOfHatBronze from "./proof-of-hat-bronze";
@@ -20,6 +23,10 @@ import sismoCitizens from "./sismo-citizens";
 import sismoContributors from "./sismo-contributors";
 import sismoDiggers from "./sismo-diggers";
 import sismoDomain from "./sismo-domains";
+import sismoEarlyUsers from "./sismo-early-users"
+import sismoEvents from "./sismo-events"
+import sismoGen from "./sismo-gen";
+import sismoGitcoinDonors from "./sismo-gitcoin-donors";
 import sismoGuest from "./sismo-guests";
 import sismoLensFollowers from "./sismo-lens-followers";
 import sismoMasqueradeLensFollowers from "./sismo-masquerade-lens-followers";
@@ -32,9 +39,12 @@ export const groupGenerators: GroupGeneratorsLibrary = {
   "ethereum-developers": ethereumDevelopers,
   "ethereum-most-transactions": ethereumMostTransactions,
   "ethereum-power-users": ethereumPowerUsers,
+  "ethereum-power-users-zk-badge-holders": EthereumPowerUsersZkBadgeHolders,
   "lens-profiles": lensProfiles,
   "local-group": localGroup,
   "masquerade-lens-followers": masqueradeLensFollowers,
+  "masquerade-zk-badge-holders": MasqueradeZkBadgeHolders,
+  "poh-zk-badge-holders": pohZkBadgeHolders,
   "pooly-lawyer-minters": poolyLawyerMinters,
   "pooly-minters": poolyMinters,
   "proof-of-hat-bronze": proofOfHatBronze,
@@ -46,6 +56,10 @@ export const groupGenerators: GroupGeneratorsLibrary = {
   "sismo-contributors": sismoContributors,
   "sismo-diggers": sismoDiggers,
   "sismo-domains": sismoDomain,
+  "sismo-early-users": sismoEarlyUsers,
+  "sismo-events": sismoEvents,
+  "sismo-gen": sismoGen,
+  "sismo-gitcoin-donors": sismoGitcoinDonors,
   "sismo-guests": sismoGuest,
   "sismo-lens-followers": sismoLensFollowers,
   "sismo-masquerade-lens-followers": sismoMasqueradeLensFollowers,
