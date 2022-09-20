@@ -23,7 +23,6 @@ import sismoDomain from "./sismo-domains";
 import sismoGuest from "./sismo-guests";
 import sismoLensFollowers from "./sismo-lens-followers";
 import sismoMasqueradeLensFollowers from "./sismo-masquerade-lens-followers";
-import snapshotGitcoinDaoVoters from "./snapshot-gitcoindao-voters";
 import {
   gamejustuBronzeWinner, gamejustuSilverWinner, gamejustuGoldWinner,
   gamejustuBronzeLoser, gamejustuSilverLoser, gamejustuGoldLoser,
@@ -59,7 +58,6 @@ export const groupGenerators: GroupGeneratorsLibrary = {
   "proof-of-lepak-member": proofOfLepakMember,
   "circularmerch-lens-followers": circularmerchLensFollowers,
   "lens-50-best-followed": lens50BestFollowed,
-  "snapshot-gitcoindao-voters": snapshotGitcoinDaoVoters,
   "gamejutsu-bronze-winner": gamejustuBronzeWinner,
   "gamejutsu-silver-winner": gamejustuSilverWinner,
   "gamejutsu-gold-winner": gamejustuGoldWinner,
