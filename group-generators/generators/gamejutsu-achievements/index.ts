@@ -28,7 +28,7 @@ function makeAmount(grade: 'bronze' | 'silver' | 'gold') : number | undefined {
   }
 }
 
-function getGenerator(achievement: 'winner' | 'loser' | 'draw' | 'cheater', grade: 'bronze' | 'silver' | 'gold') {
+function makeGenerator(achievement: 'winner' | 'loser' | 'draw' | 'cheater', grade: 'bronze' | 'silver' | 'gold') {
   const generator: GroupGenerator = {
     generationFrequency: GenerationFrequency.Daily,
 
@@ -67,15 +67,15 @@ function getGenerator(achievement: 'winner' | 'loser' | 'draw' | 'cheater', grad
   return generator;
 }
 
-export const gamejustuBronzeWinner = getGenerator('winner', 'bronze');
-export const gamejustuSilverWinner = getGenerator('winner', 'silver');
-export const gamejustuGoldWinner = getGenerator('winner', 'gold');
-export const gamejustuBronzeLoser = getGenerator('loser', 'bronze');
-export const gamejustuSilverLoser = getGenerator('loser', 'silver');
-export const gamejustuGoldLoser = getGenerator('loser', 'gold');
-export const gamejustuBronzeDraw = getGenerator('draw', 'bronze');
-export const gamejustuSilverDraw = getGenerator('draw', 'silver');
-export const gamejustuGoldDraw = getGenerator('draw', 'gold');
-export const gamejustuBronzeCheater = getGenerator('cheater', 'bronze');
-export const gamejustuSilverCheater = getGenerator('cheater', 'silver');
-export const gamejustuGoldCheater = getGenerator('cheater', 'gold');
+export const gamejustuBronzeWinner = makeGenerator('winner', 'bronze');
+export const gamejustuSilverWinner = makeGenerator('winner', 'silver');
+export const gamejustuGoldWinner = makeGenerator('winner', 'gold');
+export const gamejustuBronzeLoser = makeGenerator('loser', 'bronze');
+export const gamejustuSilverLoser = makeGenerator('loser', 'silver');
+export const gamejustuGoldLoser = makeGenerator('loser', 'gold');
+export const gamejustuBronzeDraw = makeGenerator('draw', 'bronze');
+export const gamejustuSilverDraw = makeGenerator('draw', 'silver');
+export const gamejustuGoldDraw = makeGenerator('draw', 'gold');
+export const gamejustuBronzeCheater = makeGenerator('cheater', 'bronze');
+export const gamejustuSilverCheater = makeGenerator('cheater', 'silver');
+export const gamejustuGoldCheater = makeGenerator('cheater', 'gold');
