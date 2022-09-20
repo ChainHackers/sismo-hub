@@ -23,6 +23,13 @@ import sismoDomain from "./sismo-domains";
 import sismoGuest from "./sismo-guests";
 import sismoLensFollowers from "./sismo-lens-followers";
 import sismoMasqueradeLensFollowers from "./sismo-masquerade-lens-followers";
+import snapshotGitcoinDaoVoters from "./snapshot-gitcoindao-voters";
+import {
+  gamejustuBronzeWinner, gamejustuSilverWinner, gamejustuGoldWinner,
+  gamejustuBronzeLoser, gamejustuSilverLoser, gamejustuGoldLoser,
+  gamejustuBronzeDraw, gamejustuSilverDraw, gamejustuGoldDraw,
+  gamejustuBronzeCheater, gamejustuSilverCheater, gamejustuGoldCheater,
+} from "./gamejutsu-achievements";
 
 import { GroupGeneratorsLibrary } from "topics/group-generator";
 
@@ -52,4 +59,17 @@ export const groupGenerators: GroupGeneratorsLibrary = {
   "proof-of-lepak-member": proofOfLepakMember,
   "circularmerch-lens-followers": circularmerchLensFollowers,
   "lens-50-best-followed": lens50BestFollowed,
+  "snapshot-gitcoindao-voters": snapshotGitcoinDaoVoters,
+  "gamejutsu-bronze-winner": gamejustuBronzeWinner,
+  "gamejutsu-silver-winner": gamejustuSilverWinner,
+  "gamejutsu-gold-winner": gamejustuGoldWinner,
+  "gamejutsu-bronze-loser": gamejustuBronzeLoser,
+  "gamejutsu-silver-loser": gamejustuSilverLoser,
+  "gamejutsu-gold-loser": gamejustuGoldLoser,
+  "gamejutsu-bronze-draw": gamejustuBronzeDraw,
+  "gamejutsu-silver-draw": gamejustuSilverDraw,
+  "gamejutsu-gold-draw": gamejustuGoldDraw,
+  "gamejutsu-bronze-cheater": gamejustuBronzeCheater,
+  "gamejutsu-silver-cheater": gamejustuSilverCheater,
+  "gamejutsu-gold-cheater": gamejustuGoldCheater,
 };

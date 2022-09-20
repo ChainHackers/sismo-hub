@@ -77,4 +77,20 @@ export const localFlows: Flow[] = [
     ctaUrl: "https://discord.gg/sismo",
     congratulationTexts: ["Provide feedback on Discord", "Join Snapshot Space"],
   },
+    // HERE IS YOUR FLOW
+      {
+	          path: "snapshot-gitcoindao-voters", // choose your frontend path
+		      attester: hydraS1LocalAttester.name,
+		          network: Network.Local,
+			      attesterType: "hydra-s1", // choose your attester
+			          badgesCollection: hydraS1LocalBadges,
+				      badgesInternalCollectionsIds: [3], // choose your badge id here
+				          title: "Gitcoin Voters", // choose your title 
+					      logoUrl: null,
+					          subtitle: "Attest your vote on Snapshot's Gitcoin space", // choose your subtitle
+						      onboardingDescription: "Access gated Gitcoin channels and become an active member of the Gitcoin DAO", // hype your users !
+						          ctaLabel: "Access gated channels",
+							      ctaUrl: "<https://discord.gg/gitcoin>", // provide a link to your users
+							          congratulationTexts: ["Join Snapshot space !"],
+								    },
 ];

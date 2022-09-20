@@ -34,6 +34,25 @@ export const hydraS1LocalAttester = generateHydraS1Attester(
           await groupStore.latest("local-group"),
         ],
       },
+      // REGISTER YOUR GROUP HERE
+      // Snapshot Gitcoin voters
+      {
+        // notice the collection id and choose one that is available
+        internalCollectionId: 3,
+        groupFetcher: async (groupStore) => [
+          // you fetch the last group generated with the name "snapshot-gitcoindao-voters"
+          await groupStore.latest("snapshot-gitcoindao-voters"),
+        ],
+      },
+      {
+        // notice the collection id and choose one that is available
+        internalCollectionId: 4,
+        groupFetcher: async (groupStore) => [
+          // you fetch the last group generated with the name "snapshot-gitcoindao-voters"
+          await groupStore.latest("gamejutsu-bronze-loser"),
+        ],
+      },
+      // IT ENDS HERE		    
     ],
   }
 );
@@ -68,5 +87,23 @@ export const hydraS1LocalBadges: BadgesCollection = {
       attributes: {},
       requirements: [],
     },
+    // REGISTER YOUR BADGE HERE
+    {
+      internalCollectionId: 3, // input the same collection id than before
+      name: "ZK Badge: Gitcoin Voter on Snapshot", // add a name to your badge
+      description: "ZK Badge received by Gitcoin voters on Snapshot", // describe it !
+      image: "sismo_citizen.svg", // give it a wonderful artwork ;)
+      attributes: {},
+      requirements: [],
+    },
+    {
+      internalCollectionId: 4, // input the same collection id than before
+      name: "ZK Badge: Gitcoin Voter on Snapshot", // add a name to your badge
+      description: "ZK Badge received by Gitcoin voters on Snapshot", // describe it !
+      image: "sismo_citizen.svg", // give it a wonderful artwork ;)
+      attributes: {},
+      requirements: [],
+    },
+    // IT ENDS HERE
   ],
 };
