@@ -16,7 +16,7 @@ const gamejutsuCommon = {
   logoUrl: null,
   onboardingDescription: "Access gated GameJutsu channel and become an active member of the ChainHackers state channel gamers", // hype your users !
   ctaLabel: "Access gated channels",
-  ctaUrl: "<https://discord.gg/a5E9vWbp9R>",
+  ctaUrl: "https://discord.gg/a5E9vWbp9R",
   congratulationTexts: ["Welcome to the miracle!"],
 }
 
