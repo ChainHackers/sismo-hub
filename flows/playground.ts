@@ -175,7 +175,7 @@ export const playgroundFlows: Flow[] = [
     badgesInternalCollectionsIds: [18],
     path: "gamejutsu-gold-loser",
     title: "Black Loser",
-    subtitle: "Attest your 10th repetitive lose at gamejutsu.app at gamejutsu.app",
+    subtitle: "Attest your 10th repetitive lose at gamejutsu.app",
   },
   {
     ...gamejutsuCommon,
@@ -189,14 +189,14 @@ export const playgroundFlows: Flow[] = [
     badgesInternalCollectionsIds: [20],
     path: "gamejutsu-silver-draw",
     title: "Green Peacemonger",
-    subtitle: "Attest your fifth repetitive draw at gamejutsu.app at gamejutsu.app",
+    subtitle: "Attest your fifth repetitive draw at gamejutsu.app",
   },
   {
     ...gamejutsuCommon,
     badgesInternalCollectionsIds: [21],
     path: "gamejutsu-gold-draw",
     title: "Black Peacemonger",
-    subtitle: "Attest your 10th repetitive draw at gamejutsu.app at gamejutsu.app",
+    subtitle: "Attest your 10th repetitive draw at gamejutsu.app",
   },
   {
     ...gamejutsuCommon,
@@ -210,14 +210,14 @@ export const playgroundFlows: Flow[] = [
     badgesInternalCollectionsIds: [23],
     path: "gamejutsu-silver-cheater",
     title: "Green Belt In Cheating",
-    subtitle: "Attest your fifth repetitive cheat at gamejutsu.app at gamejutsu.app",
+    subtitle: "Attest your fifth repetitive cheat at gamejutsu.app",
   },
   {
     ...gamejutsuCommon,
     badgesInternalCollectionsIds: [24],
     path: "gamejutsu-gold-cheater",
     title: "Black Belt In Cheating",
-    subtitle: "Attest your 10th repetitive cheat at gamejutsu.app at gamejutsu.app",
+    subtitle: "Attest your 10th repetitive cheat at gamejutsu.app",
   },
   {
     path: "sismo-contributor",
